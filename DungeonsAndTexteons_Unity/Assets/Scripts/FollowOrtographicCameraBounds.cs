@@ -20,6 +20,8 @@ namespace DungeonsAndTexteons
         public BoxCollider2D collToControl;
         public CameraBound sideToFollow;
         public Camera ortoCamera;
+        public bool controlSize = true;
+        public bool controlOffset = true;
 
         #endregion
 
@@ -41,28 +43,52 @@ namespace DungeonsAndTexteons
             switch (sideToFollow)
             {
                 case CameraBound.Front:
-                    offsetMultiplier = 1f;
-                    sizeMultiplier = 1.45f;
-                    collToControl.offset = new Vector2(0, offsetMultiplier * ortoCamera.orthographicSize);
-                    collToControl.size = new Vector2(sizeMultiplier * ortoCamera.orthographicSize, 1);
+                    if (controlOffset)
+                    {
+                        offsetMultiplier = 1f;
+                        collToControl.offset = new Vector2(0, offsetMultiplier * ortoCamera.orthographicSize);
+                    }
+                    if (controlSize)
+                    {
+                        sizeMultiplier = 1.45f;
+                        collToControl.size = new Vector2(sizeMultiplier * ortoCamera.orthographicSize, 1);
+                    }
                     break;
                 case CameraBound.Rear:
-                    offsetMultiplier = -1f;
-                    sizeMultiplier = 1.45f;
-                    collToControl.offset = new Vector2(0, offsetMultiplier * ortoCamera.orthographicSize);
-                    collToControl.size = new Vector2(sizeMultiplier * ortoCamera.orthographicSize, 1);
+                    if (controlOffset)
+                    {
+                        offsetMultiplier = -1f;
+                        collToControl.offset = new Vector2(0, offsetMultiplier * ortoCamera.orthographicSize);
+                    }
+                    if (controlSize)
+                    {
+                        sizeMultiplier = 1.45f;
+                        collToControl.size = new Vector2(sizeMultiplier * ortoCamera.orthographicSize, 1);
+                    }
                     break;
                 case CameraBound.Right:
-                    offsetMultiplier = .62f;
-                    sizeMultiplier = 2f;
-                    collToControl.offset = new Vector2(offsetMultiplier * ortoCamera.orthographicSize, 0);
-                    collToControl.size = new Vector2(1, sizeMultiplier * ortoCamera.orthographicSize);
+                    if (controlOffset)
+                    {
+                        offsetMultiplier = .62f;
+                        collToControl.offset = new Vector2(offsetMultiplier * ortoCamera.orthographicSize, 0);
+                    }
+                    if (controlSize)
+                    {
+                        sizeMultiplier = 2f;
+                        collToControl.size = new Vector2(1, sizeMultiplier * ortoCamera.orthographicSize);
+                    }
                     break;
                 case CameraBound.Left:
-                    offsetMultiplier = -.62f;
-                    sizeMultiplier = 2;
-                    collToControl.offset = new Vector2(offsetMultiplier * ortoCamera.orthographicSize, 0);
-                    collToControl.size = new Vector2(1, sizeMultiplier * ortoCamera.orthographicSize);
+                    if (controlOffset)
+                    {
+                        offsetMultiplier = .62f;
+                        collToControl.offset = new Vector2(offsetMultiplier * ortoCamera.orthographicSize, 0);
+                    }
+                    if (controlSize)
+                    {
+                        sizeMultiplier = 2f;
+                        collToControl.size = new Vector2(1, sizeMultiplier * ortoCamera.orthographicSize);
+                    }
                     break;
             }
         }
