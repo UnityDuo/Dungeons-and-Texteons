@@ -62,8 +62,8 @@ namespace DungeonsAndTexteons
     [System.Serializable]
     public class TimedGameEvent
     {
-        public List<GameEvent> eventsToTrigger;
         public float timerBeforeTrigger = 1f;
+        public List<GameEvent> eventsToTrigger;
     }
 
 }

@@ -264,6 +264,7 @@ MonoBehaviour:
   gameEvents:
   - eventsToTrigger:
     - {fileID: 11400000, guid: 4f6736ab33700b443890ae9f9d2cab55, type: 2}
+    - {fileID: 11400000, guid: 4f6736ab33700b443890ae9f9d2cab55, type: 2}
     timerBeforeTrigger: 5
   - eventsToTrigger:
     - {fileID: 11400000, guid: 4f6736ab33700b443890ae9f9d2cab55, type: 2}
