@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b74b77919302d674e8cb6486a218cde2, type: 3}
-  m_Name: spawn_rock_top
+  m_Name: spawn_Arrow_top_
   m_EditorClassIdentifier: 
-  spawnedObject: {fileID: 6656613987139118774, guid: e85a4c505d455134ab30b721a4bc52e7,
+  spawnedObject: {fileID: 6656613987139118774, guid: a6ee2b11fb491de498981b2aa532b512,
     type: 3}
   spawnSide: 0
   isRandomPos: 0

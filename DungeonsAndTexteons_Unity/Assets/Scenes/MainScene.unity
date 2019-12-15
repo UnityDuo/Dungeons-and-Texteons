@@ -262,13 +262,162 @@ MonoBehaviour:
   globalVSpeed: 1
   globalHSpeed: 0
   gameEvents:
-  - eventsToTrigger:
+  - timerBeforeTrigger: 5
+    eventsToTrigger:
     - {fileID: 11400000, guid: 4f6736ab33700b443890ae9f9d2cab55, type: 2}
+  - timerBeforeTrigger: 5
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 14997758c2ecfc4449a206d912f5f8f8, type: 2}
+    - {fileID: 11400000, guid: 519926cfd5e83814e835123f52bdecd5, type: 2}
+  - timerBeforeTrigger: 4
+    eventsToTrigger:
     - {fileID: 11400000, guid: 4f6736ab33700b443890ae9f9d2cab55, type: 2}
-    timerBeforeTrigger: 5
-  - eventsToTrigger:
+  - timerBeforeTrigger: 3
+    eventsToTrigger:
     - {fileID: 11400000, guid: 4f6736ab33700b443890ae9f9d2cab55, type: 2}
-    timerBeforeTrigger: 5
+    - {fileID: 11400000, guid: 14997758c2ecfc4449a206d912f5f8f8, type: 2}
+  - timerBeforeTrigger: 3
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 519926cfd5e83814e835123f52bdecd5, type: 2}
+    - {fileID: 11400000, guid: 14997758c2ecfc4449a206d912f5f8f8, type: 2}
+  - timerBeforeTrigger: 3
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+  - timerBeforeTrigger: 2
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+  - timerBeforeTrigger: 2
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+  - timerBeforeTrigger: 3
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 4f6736ab33700b443890ae9f9d2cab55, type: 2}
+    - {fileID: 11400000, guid: 14997758c2ecfc4449a206d912f5f8f8, type: 2}
+  - timerBeforeTrigger: 2
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 519926cfd5e83814e835123f52bdecd5, type: 2}
+    - {fileID: 11400000, guid: 14997758c2ecfc4449a206d912f5f8f8, type: 2}
+  - timerBeforeTrigger: 1
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+  - timerBeforeTrigger: 5
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 4cd5c7fdd4a0ca24f97250c1ceda40d2, type: 2}
+    - {fileID: 11400000, guid: 73b6065cc63805b40b6abc69be51646b, type: 2}
+    - {fileID: 11400000, guid: faa47a55e59d436408c1b7057ee8c55a, type: 2}
+  - timerBeforeTrigger: 5
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+  - timerBeforeTrigger: 4
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+  - timerBeforeTrigger: 3
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 4cd5c7fdd4a0ca24f97250c1ceda40d2, type: 2}
+    - {fileID: 11400000, guid: 73b6065cc63805b40b6abc69be51646b, type: 2}
+    - {fileID: 11400000, guid: faa47a55e59d436408c1b7057ee8c55a, type: 2}
+  - timerBeforeTrigger: 3
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 4f6736ab33700b443890ae9f9d2cab55, type: 2}
+  - timerBeforeTrigger: 3
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+  - timerBeforeTrigger: 3
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 14997758c2ecfc4449a206d912f5f8f8, type: 2}
+    - {fileID: 11400000, guid: 519926cfd5e83814e835123f52bdecd5, type: 2}
+  - timerBeforeTrigger: 3
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+  - timerBeforeTrigger: 4
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 14997758c2ecfc4449a206d912f5f8f8, type: 2}
+    - {fileID: 11400000, guid: 73b6065cc63805b40b6abc69be51646b, type: 2}
+    - {fileID: 11400000, guid: faa47a55e59d436408c1b7057ee8c55a, type: 2}
+  - timerBeforeTrigger: 3
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+  - timerBeforeTrigger: 2
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 14997758c2ecfc4449a206d912f5f8f8, type: 2}
+    - {fileID: 11400000, guid: faa47a55e59d436408c1b7057ee8c55a, type: 2}
+  - timerBeforeTrigger: 2
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 4cd5c7fdd4a0ca24f97250c1ceda40d2, type: 2}
+    - {fileID: 11400000, guid: 73b6065cc63805b40b6abc69be51646b, type: 2}
+    - {fileID: 11400000, guid: faa47a55e59d436408c1b7057ee8c55a, type: 2}
+  - timerBeforeTrigger: 2
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 4f6736ab33700b443890ae9f9d2cab55, type: 2}
+  - timerBeforeTrigger: 3
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+  - timerBeforeTrigger: 3
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+  - timerBeforeTrigger: 2
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+  - timerBeforeTrigger: 2
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 14997758c2ecfc4449a206d912f5f8f8, type: 2}
+    - {fileID: 11400000, guid: 73b6065cc63805b40b6abc69be51646b, type: 2}
+    - {fileID: 11400000, guid: faa47a55e59d436408c1b7057ee8c55a, type: 2}
+  - timerBeforeTrigger: 2
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 4f6736ab33700b443890ae9f9d2cab55, type: 2}
+  - timerBeforeTrigger: 1
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 73b6065cc63805b40b6abc69be51646b, type: 2}
+    - {fileID: 11400000, guid: 14997758c2ecfc4449a206d912f5f8f8, type: 2}
+    - {fileID: 11400000, guid: 519926cfd5e83814e835123f52bdecd5, type: 2}
+  - timerBeforeTrigger: 1
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 73b6065cc63805b40b6abc69be51646b, type: 2}
+    - {fileID: 11400000, guid: 519926cfd5e83814e835123f52bdecd5, type: 2}
+  - timerBeforeTrigger: 2
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+  - timerBeforeTrigger: 2
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+  - timerBeforeTrigger: 1
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+  - timerBeforeTrigger: 1
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
+    - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
 --- !u!1 &472933669
 GameObject:
   m_ObjectHideFlags: 0
