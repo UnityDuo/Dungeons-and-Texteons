@@ -29,14 +29,14 @@ namespace DungeonsAndTexteons
 
         private void FixedUpdate()
         {
-            ReplaceCollider();
+            RepositionCollider();
         }
 
         #endregion
 
         #region Methods
 
-        private void ReplaceCollider()
+        private void RepositionCollider()
         {
             float offsetMultiplier = 0;
             float sizeMultiplier = 0;

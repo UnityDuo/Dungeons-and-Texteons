@@ -13,6 +13,7 @@ namespace DungeonsAndTexteons
         public float maxSpeed = 5f;
         public float acceleration = 1f;
         public float deceleration = .5f;
+        public SpriteRenderer spriteRenderer;
 
         [SerializeField] private KeyCode moveForward = KeyCode.W;
         [SerializeField] private KeyCode moveBackwards = KeyCode.S;
@@ -98,6 +99,13 @@ namespace DungeonsAndTexteons
                 speed = speed.normalized * maxSpeed * Time.deltaTime;
                 vSpeed = speed.y;
                 hSpeed = speed.x;
+            }
+
+            //Graphics
+            if(speed.x != 0)
+            {
+                spriteRenderer.gameObject.transform.localScale = new Vector3(Mathf.Lerp(.8f, 1f, 
+                                1 - Mathf.InverseLerp(0, maxSpeed * Time.deltaTime, Mathf.Abs(speed.x))), 1, 1);
             }
         }
 
