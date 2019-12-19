@@ -33,6 +33,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4442023859741767362}
+  - {fileID: 1012219631912703514}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -101,6 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698bf0c3d10968142a448eed1625191c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canBeDamaged: 1
 --- !u!114 &4442023858445666084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,8 +116,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 4442023858445666087}
+  projectileSpawnPoint: {fileID: 1012219631912703514}
   invulnerabilityTimeAfterHit: 2
   invulnerabilityColor: {r: 1, g: 0, b: 0, a: 0.627451}
+  attackKey: 32
+  projectileData:
+    damageMultiplier: 1
+    speedMultiplier: 1
+    numberOfProjcetiles: 1
+    projectileObject: {fileID: 2799219462638904899, guid: 711f8996eea8f344ab6806c648bfc702,
+      type: 3}
 --- !u!60 &4442023858445666086
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -249,7 +259,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 383678649
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ab6775068fba9af43b5fbe056bc00179, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -261,3 +271,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5836509993854158541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1012219631912703514}
+  m_Layer: 9
+  m_Name: ProjectileSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1012219631912703514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5836509993854158541}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4442023858445666088}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -10,8 +10,12 @@ namespace DungeonsAndTexteons
         #region Fields
 
         public PlayerController playerController;
+        public Transform projectileSpawnPoint;
         public float invulnerabilityTimeAfterHit = 2f;
         public Color invulnerabilityColor;
+        public KeyCode attackKey = KeyCode.Space;
+
+        public ProjectileData projectileData = new ProjectileData();
 
         private Damageable damageable;
 
@@ -27,6 +31,14 @@ namespace DungeonsAndTexteons
             }
         }
 
+        private void Update()
+        {
+            if(Input.GetKeyDown(attackKey))
+            {
+                SpawnProjectiles();
+            }
+        }
+
         #endregion
 
         #region Methods
@@ -35,6 +47,19 @@ namespace DungeonsAndTexteons
         {
             GameManager.instance.CurrPlayerHp -= amount;
             InvulnerablePeriod();
+        }
+
+        private void SpawnProjectiles()
+        {
+            for (int i = 0; i < projectileData.numberOfProjcetiles; i++)
+            {
+                var newProjectile = Instantiate(projectileData.projectileObject);
+                newProjectile.transform.position = projectileSpawnPoint.position;
+
+                var projScript = newProjectile.GetComponent<Projectile>();
+                projScript.speed *= projectileData.speedMultiplier;
+                projScript.damager.damage *= projectileData.damageMultiplier;
+            }
         }
 
         private void InvulnerablePeriod()

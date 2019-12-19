@@ -11,6 +11,7 @@ namespace DungeonsAndTexteons
 
         public int damage = 1;
         public LayerMask damageLayers;
+        public bool destroyOnDamage = false;
 
         #endregion
 
@@ -23,8 +24,14 @@ namespace DungeonsAndTexteons
                 var damageable = collision.gameObject.GetComponent<Damageable>();
                 if(damageable != null)
                 {
-                    if(damageable.canBeDamaged)
+                    if (damageable.canBeDamaged)
+                    {
                         damageable.ReceiveDamage(damage);
+                        if(destroyOnDamage)
+                        {
+                            Destroy(gameObject);
+                        }
+                    }
                 }
             }
         }
@@ -37,7 +44,13 @@ namespace DungeonsAndTexteons
                 if (damageable != null)
                 {
                     if (damageable.canBeDamaged)
+                    {
                         damageable.ReceiveDamage(damage);
+                        if (destroyOnDamage)
+                        {
+                            Destroy(gameObject);
+                        }
+                    }
                 }
             }
         }

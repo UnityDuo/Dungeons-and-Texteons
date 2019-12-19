@@ -19,7 +19,7 @@ namespace DungeonsAndTexteons
 
         #region Methods
 
-        public void ReceiveDamage(int amount)
+        public virtual void ReceiveDamage(int amount)
         {
             DamageReceived?.Invoke(amount);
         }
