@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b74b77919302d674e8cb6486a218cde2, type: 3}
-  m_Name: spawn_Arrow_top_Random 1
+  m_Script: {fileID: 11500000, guid: 5db5827b34e40644784669a2d1aed47f, type: 3}
+  m_Name: gs_default
   m_EditorClassIdentifier: 
-  spawnedObject: {fileID: 6656613987139118774, guid: a6ee2b11fb491de498981b2aa532b512,
-    type: 3}
-  spawnSide: 0
-  isRandomPos: 0
-  normalizedPosition: 0.6
+  targetSpeed: 0.75

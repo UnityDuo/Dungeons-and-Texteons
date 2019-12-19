@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ namespace DungeonsAndTexteons
     public class Damager : MonoBehaviour
     {
         #region Fields
+
+        public event Action DamagerDestroyed;
 
         public int damage = 1;
         public LayerMask damageLayers;
@@ -29,7 +32,7 @@ namespace DungeonsAndTexteons
                         damageable.ReceiveDamage(damage);
                         if(destroyOnDamage)
                         {
-                            Destroy(gameObject);
+                            DamagerDestroyed?.Invoke();
                         }
                     }
                 }
@@ -48,7 +51,7 @@ namespace DungeonsAndTexteons
                         damageable.ReceiveDamage(damage);
                         if (destroyOnDamage)
                         {
-                            Destroy(gameObject);
+                            DamagerDestroyed?.Invoke();
                         }
                     }
                 }

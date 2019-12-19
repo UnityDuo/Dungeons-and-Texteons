@@ -19,7 +19,19 @@ namespace DungeonsAndTexteons
 
         private void Start()
         {
-            transform.Rotate(Vector3.forward, direction);    
+            transform.Rotate(Vector3.forward, direction);
+            var gameManager = GameManager.instance;
+            if(gameManager != null)
+            {
+                gameManager.WorldResetted += Destroy;
+            }
+            var damageableComponenet = GetComponent<DamageableWithHp>();
+            if(damageableComponenet != null)
+            {
+                damageableComponenet.DamageableDestroyed += Destroy;
+            }
+
+            
         }
 
         private void FixedUpdate()
@@ -30,6 +42,16 @@ namespace DungeonsAndTexteons
         #endregion
 
         #region Methods
+
+        public void Destroy()
+        {
+            var gameManager = GameManager.instance;
+            if (gameManager != null)
+            {
+                gameManager.WorldResetted -= Destroy;
+            }
+            Destroy(gameObject);
+        }
 
         private void MoveForward()
         {

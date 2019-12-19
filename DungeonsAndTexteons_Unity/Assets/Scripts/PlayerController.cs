@@ -27,6 +27,7 @@ namespace DungeonsAndTexteons
         private float hSpeed = 0;
         private Vector2 speed = Vector2.zero;
         private Color baseColor;
+        private Vector3 basePosition;
 
         #endregion
 
@@ -35,6 +36,12 @@ namespace DungeonsAndTexteons
         private void Start()
         {
             baseColor = spriteRenderer.color;
+            basePosition = transform.position;
+            var gameManager = GameManager.instance;
+            if(gameManager != null)
+            {
+                gameManager.WorldResetted += ResetPlayer; 
+            }
         }
 
         private void Update()
@@ -50,6 +57,12 @@ namespace DungeonsAndTexteons
         #endregion
 
         #region Methods
+
+        public void ResetPlayer()
+        {
+            transform.position = basePosition;
+            StopAllCoroutines();
+        }
 
         public void Blink(float time, Color blinkColor)
         {

@@ -17,6 +17,20 @@ namespace DungeonsAndTexteons
 
         #region Unity Callbacks
 
+        private void Start()
+        {
+            var gameManager = GameManager.instance;
+            if(gameManager != null)
+            {
+                gameManager.WorldResetted += Destroy;
+            }
+
+            if(damager != null)
+            {
+                damager.DamagerDestroyed += Destroy;
+            }
+        }
+
         private void FixedUpdate()
         {
             Move();
@@ -25,6 +39,16 @@ namespace DungeonsAndTexteons
         #endregion
 
         #region Methods
+
+        public void Destroy()
+        {
+            var gameManager = GameManager.instance;
+            if (gameManager != null)
+            {
+                gameManager.WorldResetted -= Destroy;
+            }
+            Destroy(gameObject);
+        }
 
         private void Move()
         {

@@ -11,6 +11,8 @@ namespace DungeonsAndTexteons
     {
         #region Fields
 
+        public event Action DamageableDestroyed;
+
         public int maxHp = 5;
 
         private int currHp = 5;
@@ -54,7 +56,7 @@ namespace DungeonsAndTexteons
 
         private void Die()
         {
-            Destroy(gameObject);
+            DamageableDestroyed?.Invoke();
         }
 
         #endregion

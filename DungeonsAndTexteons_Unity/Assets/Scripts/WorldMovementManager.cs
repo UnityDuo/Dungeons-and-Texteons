@@ -2,11 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 namespace DungeonsAndTexteons
 {
 
-    public class WorldMovementManager : MonoBehaviour
+    public class WorldMovementManager : Singleton<WorldMovementManager>
     {
         #region Fields
 
@@ -14,9 +15,8 @@ namespace DungeonsAndTexteons
 
         public float globalVSpeed = 1f;
         public float globalHSpeed = 0f;
+        public int currentGameEventIndex;
         public List<TimedGameEvent> gameEvents;
-
-        private int currentGameEventIndex = 0;
 
         #endregion
 
