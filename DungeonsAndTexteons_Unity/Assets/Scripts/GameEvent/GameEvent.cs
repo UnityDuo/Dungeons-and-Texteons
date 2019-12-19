@@ -7,7 +7,7 @@ namespace DungeonsAndTexteons
 
     public class GameEvent : ScriptableObject
     {
-        public virtual void Trigger() { Debug.Log("Event triggered: " + name); }
+        public virtual void Trigger() { }
     }
 
 }

@@ -14,6 +14,7 @@ namespace DungeonsAndTexteons
         public float acceleration = 1f;
         public float deceleration = .5f;
         public SpriteRenderer spriteRenderer;
+        public AnimationCurve blinkBehaviour;
 
         [SerializeField] private KeyCode moveForward = KeyCode.W;
         [SerializeField] private KeyCode moveBackwards = KeyCode.S;
@@ -25,10 +26,16 @@ namespace DungeonsAndTexteons
         private float vSpeed = 0;
         private float hSpeed = 0;
         private Vector2 speed = Vector2.zero;
+        private Color baseColor;
 
         #endregion
 
         #region Unity Callbacks
+
+        private void Start()
+        {
+            baseColor = spriteRenderer.color;
+        }
 
         private void Update()
         {
@@ -43,6 +50,12 @@ namespace DungeonsAndTexteons
         #endregion
 
         #region Methods
+
+        public void Blink(float time, Color blinkColor)
+        {
+            StopAllCoroutines();
+            StartCoroutine(BlinkCor(time, blinkColor));
+        }
 
         private void CheckInputs()
         {
@@ -112,6 +125,21 @@ namespace DungeonsAndTexteons
         private void Move()
         {
             transform.position += (Vector3)speed;
+        }
+
+        private IEnumerator BlinkCor(float time, Color blinkColor)
+        {
+            Color startingColor = baseColor;
+            float t = 0;
+            float a = 0;
+            while(t < time)
+            {
+                t += Time.deltaTime;
+                a = blinkBehaviour.Evaluate(t % 1);
+                spriteRenderer.color = Color.Lerp(baseColor, blinkColor, a);
+                yield return null;
+            }
+            spriteRenderer.color = baseColor;
         }
 
         #endregion
