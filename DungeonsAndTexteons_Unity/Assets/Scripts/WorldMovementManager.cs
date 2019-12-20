@@ -12,6 +12,7 @@ namespace DungeonsAndTexteons
         #region Fields
 
         public event Action<Vector2> WorldMoved;
+        public event Action<float> TrackPositionChanged;
 
         public float globalVSpeed = 1f;
         public float globalHSpeed = 0f;
@@ -25,6 +26,7 @@ namespace DungeonsAndTexteons
         private void Start()
         {
             InitializeWorld();
+            CallTrackPositionChanged(0);
         }
 
         private void FixedUpdate()
@@ -41,6 +43,11 @@ namespace DungeonsAndTexteons
             StartCoroutine(GameEventsCor());
         }
 
+        public void CallTrackPositionChanged(float forcedValue = -1)
+        {
+            TrackPositionChanged?.Invoke(forcedValue == -1 ? (float)currentGameEventIndex / (gameEvents.Count - 1) : forcedValue);
+        }
+
         private IEnumerator GameEventsCor()
         {
             while(currentGameEventIndex < gameEvents.Count)
@@ -53,6 +60,7 @@ namespace DungeonsAndTexteons
                 }
 
                 currentGameEventIndex++;
+                CallTrackPositionChanged();
             }
         }
 

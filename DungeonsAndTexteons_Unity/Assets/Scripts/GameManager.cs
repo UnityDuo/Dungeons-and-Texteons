@@ -13,11 +13,14 @@ namespace DungeonsAndTexteons
 
         public event Action<int, int> PlayerHpChanged;
         public event Action WorldResetted;
+        public event Action<float> TrackPositionChanged;
 
         public int thisLevelIndex = 0;
         public List<string> levelsScenes = new List<string>();
         public float globalSpeed = 1f;
         public int playerMaxHp = 3;
+
+        public string menuSceneName = "Menu";
 
         [ReadOnly] public int currCheckPointIndex = -1;
         [ReadOnly] public int currPlayerHp = 3;
@@ -45,6 +48,18 @@ namespace DungeonsAndTexteons
 
         #endregion
 
+        #region Unity Callbacks
+
+        private void Update()
+        {
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                GoToMainMenu();
+            }
+        }
+
+        #endregion
+
         #region Methods
 
         public void ResetWorldToLastCheckpoint()
@@ -64,6 +79,7 @@ namespace DungeonsAndTexteons
                     }
                 }
                 worldMovementManager.currentGameEventIndex = lastCheckpointIndex != -1 ? lastCheckpointIndex : 0;
+                worldMovementManager.CallTrackPositionChanged();
             }
         }
 
@@ -75,13 +91,14 @@ namespace DungeonsAndTexteons
         public void LevelPassed()
         {
             var sceneLoader = SceneLoader.instance;
-            if (thisLevelIndex < levelsScenes.Count - 1 && sceneLoader != null)
+            thisLevelIndex++;
+            if (thisLevelIndex < levelsScenes.Count && sceneLoader != null)
             {
-                sceneLoader.LoadScene(levelsScenes[thisLevelIndex + 1]);
+                StartCoroutine(NextLevelCor(levelsScenes[thisLevelIndex], sceneLoader));
             }
             else
             {
-                GameWin();
+                StartCoroutine(GameWin());
             }
         }
 
@@ -115,9 +132,25 @@ namespace DungeonsAndTexteons
             ResetWorldToLastCheckpoint();
         }
 
-        private void GameWin()
+        private IEnumerator GameWin()
         {
-            Debug.Log("YouWin");
+            SetGlobalSpeed(.5f);
+            UIWinPanel.instance.Win();
+            yield return new WaitForSeconds(2f);
+            GoToMainMenu();
+        }
+
+        private IEnumerator NextLevelCor(string sceneToLoadName, SceneLoader sceneLoader)
+        {
+            SetGlobalSpeed(.5f);
+            UIWinPanel.instance.NextLevel();
+            yield return new WaitForSeconds(2f);
+            sceneLoader.LoadScene(sceneToLoadName);
+        }
+        
+        private void GoToMainMenu()
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(menuSceneName);
         }
 
         #endregion

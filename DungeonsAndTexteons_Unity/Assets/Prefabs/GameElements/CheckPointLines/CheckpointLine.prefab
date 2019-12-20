@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3126898189197835458}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.55, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2630651168491879122}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &857990453799995542
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -141,6 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkPointId: 0
+  spriteRenderer: {fileID: 857990453799995542}
+  activatedSprite: {fileID: 21300000, guid: 6ad655cd34c59394dbb90eb8f92f067e, type: 3}
 --- !u!61 &794786228608634903
 BoxCollider2D:
   m_ObjectHideFlags: 0

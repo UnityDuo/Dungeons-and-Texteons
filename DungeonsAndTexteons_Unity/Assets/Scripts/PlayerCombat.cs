@@ -45,8 +45,8 @@ namespace DungeonsAndTexteons
 
         public void ReceiveDamage(int amount)
         {
-            GameManager.instance.CurrPlayerHp -= amount;
             InvulnerablePeriod();
+            GameManager.instance.CurrPlayerHp -= amount;
         }
 
         private void SpawnProjectiles()

@@ -62,6 +62,7 @@ namespace DungeonsAndTexteons
         {
             transform.position = basePosition;
             StopAllCoroutines();
+            spriteRenderer.color = baseColor;
         }
 
         public void Blink(float time, Color blinkColor)
@@ -130,7 +131,7 @@ namespace DungeonsAndTexteons
             //Graphics
             if(speed.x != 0)
             {
-                spriteRenderer.gameObject.transform.localScale = new Vector3(Mathf.Lerp(.8f, 1f, 
+                gameObject.transform.localScale = new Vector3(Mathf.Lerp(.8f, 1f, 
                                 1 - Mathf.InverseLerp(0, maxSpeed * Time.deltaTime, Mathf.Abs(speed.x))), 1, 1);
             }
         }

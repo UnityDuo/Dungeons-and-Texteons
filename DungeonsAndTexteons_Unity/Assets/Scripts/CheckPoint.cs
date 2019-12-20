@@ -9,7 +9,9 @@ namespace DungeonsAndTexteons
     {
         #region Fields
 
-        public int checkPointId = 0; 
+        public int checkPointId = 0;
+        public SpriteRenderer spriteRenderer;
+        public Sprite activatedSprite;
 
         #endregion
 
@@ -21,6 +23,7 @@ namespace DungeonsAndTexteons
             if (gameManager != null)
             {
                 gameManager.currCheckPointIndex = checkPointId;
+                spriteRenderer.sprite = activatedSprite;
             }
         }
 

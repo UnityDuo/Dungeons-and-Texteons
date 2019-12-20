@@ -130,7 +130,7 @@ MonoBehaviour:
   damage: 1
   damageLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 5120
   destroyOnDamage: 1
 --- !u!114 &-2805386051095781831
 MonoBehaviour:
