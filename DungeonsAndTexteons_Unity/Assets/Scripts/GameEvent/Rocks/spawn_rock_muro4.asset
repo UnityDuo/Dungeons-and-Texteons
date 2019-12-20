@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b74b77919302d674e8cb6486a218cde2, type: 3}
+  m_Name: spawn_rock_muro4
+  m_EditorClassIdentifier: 
+  spawnedObject: {fileID: 6656613987139118774, guid: e85a4c505d455134ab30b721a4bc52e7,
+    type: 3}
+  spawnSide: 0
+  isRandomPos: 0
+  normalizedPosition: 0.55
