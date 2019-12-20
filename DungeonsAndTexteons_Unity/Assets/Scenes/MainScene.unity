@@ -275,7 +275,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4f6736ab33700b443890ae9f9d2cab55, type: 2}
   - timerBeforeTrigger: 1
     eventsToTrigger:
-    - {fileID: 11400000, guid: 6ac38f417a9afd34d851edec4b463376, type: 2}
+    - {fileID: 11400000, guid: 54b2cd2b08a151d41a8ad73ce82a6f70, type: 2}
   - timerBeforeTrigger: 3
     eventsToTrigger:
     - {fileID: 11400000, guid: 4f6736ab33700b443890ae9f9d2cab55, type: 2}
@@ -326,6 +326,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
     - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
     - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+  - timerBeforeTrigger: 2
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 54b2cd2b08a151d41a8ad73ce82a6f70, type: 2}
   - timerBeforeTrigger: 3
     eventsToTrigger:
     - {fileID: 11400000, guid: 4cd5c7fdd4a0ca24f97250c1ceda40d2, type: 2}
@@ -369,6 +372,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: faa47a55e59d436408c1b7057ee8c55a, type: 2}
   - timerBeforeTrigger: 1
     eventsToTrigger:
+    - {fileID: 11400000, guid: 77a097e0bed1c04408ab9665d86b2378, type: 2}
+  - timerBeforeTrigger: 2
+    eventsToTrigger:
     - {fileID: 11400000, guid: 83658a6fff92c684f9338df4851fba7d, type: 2}
   - timerBeforeTrigger: 2
     eventsToTrigger:
@@ -378,6 +384,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
     - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
     - {fileID: 11400000, guid: 3e3b79ab074484c4080252e70e20d0b3, type: 2}
+  - timerBeforeTrigger: 1
+    eventsToTrigger:
+    - {fileID: 11400000, guid: 6ac38f417a9afd34d851edec4b463376, type: 2}
   - timerBeforeTrigger: 3
     eventsToTrigger:
     - {fileID: 11400000, guid: 7db901e0163fef944bbf460c59341dc1, type: 2}
@@ -445,7 +454,7 @@ MonoBehaviour:
   - timerBeforeTrigger: 2
     eventsToTrigger:
     - {fileID: 11400000, guid: 4cd5c7fdd4a0ca24f97250c1ceda40d2, type: 2}
-  - timerBeforeTrigger: 6
+  - timerBeforeTrigger: 5
     eventsToTrigger:
     - {fileID: 11400000, guid: 60055cfc0bc75684a85e0bbbc96091f3, type: 2}
 --- !u!1 &568094329

@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeDamaged: 1
-  maxHp: 5
+  maxHp: 2
 --- !u!50 &-1021643481521017122
 Rigidbody2D:
   serializedVersion: 4
