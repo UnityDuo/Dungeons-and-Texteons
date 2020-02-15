@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6200064678164740062}
   - component: {fileID: 6200064678164740063}
   m_Layer: 12
-  m_Name: Catapult
+  m_Name: MageNormal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,33 +47,100 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 233062fa9e2dcdc4484c6c5faa545143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 2
+  maxSpeed: 5
   timerBetweenTargetPosChange: 2
   phases:
-  - phaseTimer: 4
+  - phaseTimer: 3
+    pattern:
+      movementHorizRange: {x: 0.50341064, y: 0.50341064}
+      movementVertRange: {x: 1, y: 1}
+      doesAttack: 0
+      attackRate: {x: 0, y: 0}
+      projectilePrefab: {fileID: 0}
+  - phaseTimer: 5
     pattern:
       movementHorizRange: {x: 0, y: 1}
+      movementVertRange: {x: 0.9126876, y: 1}
+      doesAttack: 1
+      attackRate: {x: 1.5075034, y: 1.5075034}
+      projectilePrefab: {fileID: 6656613987139118774, guid: 595208b27c441af459a87168f6faf22e,
+        type: 3}
+  - phaseTimer: 10
+    pattern:
+      movementHorizRange: {x: 0.5088677, y: 0.5088677}
+      movementVertRange: {x: 0, y: 0}
+      doesAttack: 1
+      attackRate: {x: 1.0436561, y: 1.0436561}
+      projectilePrefab: {fileID: 6656613987139118774, guid: 595208b27c441af459a87168f6faf22e,
+        type: 3}
+  - phaseTimer: 5
+    pattern:
+      movementHorizRange: {x: 0, y: 1}
+      movementVertRange: {x: 0, y: 0}
+      doesAttack: 1
+      attackRate: {x: 1.5347886, y: 2.3806276}
+      projectilePrefab: {fileID: 6656613987139118774, guid: 595208b27c441af459a87168f6faf22e,
+        type: 3}
+  - phaseTimer: 4
+    pattern:
+      movementHorizRange: {x: 0.40518418, y: 0.40518418}
+      movementVertRange: {x: 1, y: 1}
+      doesAttack: 0
+      attackRate: {x: 0, y: 0}
+      projectilePrefab: {fileID: 0}
+  - phaseTimer: 5
+    pattern:
+      movementHorizRange: {x: 0.19781719, y: 0.87994546}
+      movementVertRange: {x: 0, y: 0}
+      doesAttack: 1
+      attackRate: {x: 1.1527967, y: 2.1077762}
+      projectilePrefab: {fileID: 6656613987139118774, guid: 595208b27c441af459a87168f6faf22e,
+        type: 3}
+  - phaseTimer: 10
+    pattern:
+      movementHorizRange: {x: 0, y: 1}
+      movementVertRange: {x: 0, y: 0}
+      doesAttack: 1
+      attackRate: {x: 1.0436561, y: 1.0436561}
+      projectilePrefab: {fileID: 6656613987139118774, guid: 595208b27c441af459a87168f6faf22e,
+        type: 3}
+  - phaseTimer: 3
+    pattern:
+      movementHorizRange: {x: 0.52523875, y: 0.52523875}
+      movementVertRange: {x: 1, y: 1}
+      doesAttack: 0
+      attackRate: {x: 0, y: 0}
+      projectilePrefab: {fileID: 0}
+  - phaseTimer: 5
+    pattern:
+      movementHorizRange: {x: 0.20327422, y: 0.80900407}
       movementVertRange: {x: 1, y: 1}
       doesAttack: 0
       attackRate: {x: 0, y: 0}
       projectilePrefab: {fileID: 0}
   - phaseTimer: 10
     pattern:
-      movementHorizRange: {x: 0.271158, y: 0.8129945}
-      movementVertRange: {x: 1, y: 1}
+      movementHorizRange: {x: 0.21964529, y: 0.8144611}
+      movementVertRange: {x: 0, y: 0}
       doesAttack: 1
-      attackRate: {x: 2.075042, y: 2.075042}
-      projectilePrefab: {fileID: 6656613987139118774, guid: 47b7823c2dea50241951ec8f5465c3a4,
+      attackRate: {x: 0.49795362, y: 1.6712142}
+      projectilePrefab: {fileID: 6656613987139118774, guid: 595208b27c441af459a87168f6faf22e,
         type: 3}
-  - phaseTimer: 20
+  - phaseTimer: 5
     pattern:
-      movementHorizRange: {x: 0, y: 1}
-      movementVertRange: {x: 0.9126876, y: 1}
-      doesAttack: 1
-      attackRate: {x: 1.5715656, y: 2.5785184}
-      projectilePrefab: {fileID: 6656613987139118774, guid: 47b7823c2dea50241951ec8f5465c3a4,
-        type: 3}
-  makesYouWin: 1
+      movementHorizRange: {x: 0.50341064, y: 0.50341064}
+      movementVertRange: {x: 1, y: 1}
+      doesAttack: 0
+      attackRate: {x: 0, y: 0}
+      projectilePrefab: {fileID: 0}
+  - phaseTimer: 10
+    pattern:
+      movementHorizRange: {x: 0.34515688, y: 0.80900407}
+      movementVertRange: {x: 1, y: 1}
+      doesAttack: 0
+      attackRate: {x: 0, y: 0}
+      projectilePrefab: {fileID: 0}
+  makesYouWin: 0
 --- !u!114 &6200064678164740049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,10 +180,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.42453355, y: 0.9846329}
-      - {x: -0.4413939, y: 0.98994994}
-      - {x: -0.5550137, y: -0.9251378}
-      - {x: 0.41803023, y: -0.92284566}
+    - - {x: 0.030506775, y: 0.9389863}
+      - {x: -0.31041372, y: 0.32427073}
+      - {x: -0.45050472, y: -0.450562}
+      - {x: 0.4581316, y: -0.450562}
+      - {x: 0.3332938, y: 0.2937641}
 --- !u!114 &6200064678164740063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeDamaged: 1
-  maxHp: 7
+  maxHp: 10
 --- !u!1 &6200064679211015875
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +268,7 @@ SpriteRenderer:
   m_SortingLayerID: 53170417
   m_SortingLayer: 2
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 6bc144d07f1e9674d99da6fae3dd8442, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab7a59872e8da5343a4f5bec8ac47c97, type: 3}
   m_Color: {r: 0.8849741, g: 0.4669811, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

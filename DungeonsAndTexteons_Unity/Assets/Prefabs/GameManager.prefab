@@ -43,7 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88181595dc78b454eb38f4b979c76353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneLoadedOnDeath: MainScene
+  thisLevelIndex: 0
+  levelsScenes:
+  - MainScene
+  - MainScene2
+  - MainScene3
   globalSpeed: 0.75
   playerMaxHp: 3
+  menuSceneName: Menu
+  currCheckPointIndex: -1
   currPlayerHp: 3
